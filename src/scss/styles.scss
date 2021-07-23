@@ -1,0 +1,212 @@
+@import "config";
+@import "utilities";
+
+nav {
+  // outline: red 1px solid;
+  max-width: $bodyMaxWidth;
+  min-width: $bodyMinWidth;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  height: $navHeight;
+  background-image: linear-gradient(
+    to bottom right,
+    lightcyan,
+    rgb(91, 91, 173)
+  );
+
+  .nav-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+    // gap: 5rem;
+
+    .heading {
+      // outline: red 1px solid;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        font-size: 6rem;
+
+        svg {
+          color: orange;
+        }
+      }
+      .api-credit {
+        font-size: 1.5rem;
+        opacity: 0.5;
+      }
+    }
+
+    // --------------- SEARCH BAR -------------------
+    .search-bar {
+      width: $searchWidth;
+      max-width: $searchMaxWidth;
+      min-width: 35rem;
+      text-transform: capitalize;
+      // outline: 1px solid red;
+      margin-top: 3rem;
+
+      .form-control {
+        display: flex;
+
+        input {
+          flex-basis: 90%;
+          border: none;
+          border-color: transparent;
+          padding: 1rem;
+          font-size: 1.2rem;
+        }
+
+        button {
+          background-color: rgb(121, 169, 185);
+          border: none;
+          border-top-right-radius: 0.4rem;
+          border-bottom-right-radius: 0.4rem;
+          flex-basis: 10%;
+          cursor: pointer;
+          color: white;
+          transition: $mainTransition;
+
+          svg {
+            font-size: 2rem;
+          }
+        }
+
+        &:hover {
+          input {
+            background-color: darken(white, 2.5%);
+          }
+          button {
+            background-color: darken(rgb(68, 122, 184), 5%);
+          }
+        }
+      }
+    }
+
+    // ------------------ CITY BUTTONS ------------------------
+    .history-buttons {
+      margin: 0 6rem;
+      margin-top: 2.4rem;
+      display: flex;
+      flex-direction: row;
+      // outline: 1px solid red;
+      // justify-content: space-evenly;
+      // flex-wrap: wrap;
+      .city-buttons {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        // outline: red 1px solid;
+
+        .city-btn {
+          button {
+            font-size: 1.3rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 0.5rem;
+            color: rgb(17, 17, 17);
+            letter-spacing: 0.3rem;
+            background-color: rgb(121, 169, 185);
+            transition: $mainTransition;
+
+            &:hover {
+              transform: scale(1.2);
+              background-color: rgb(68, 122, 184);
+              color: white;
+            }
+          }
+        }
+      }
+      .delete-button {
+        margin-left: 2rem;
+        button {
+          padding: 0.5rem;
+          border: none;
+          border-color: transparent;
+          background-color: transparent;
+          cursor: pointer;
+          svg {
+            transition: $mainTransition;
+            font-size: 2rem;
+
+            &:hover {
+              color: red;
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.weather-info {
+  padding-top: 3rem;
+  // outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .temperature-buttons {
+    // outline: 1px solid red;
+    margin: 0 auto;
+
+    button {
+      transform: translateX(20rem);
+      font-size: 2rem;
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 0.2rem;
+      margin-left: 1rem;
+      margin-bottom: 2rem;
+      background-image: linear-gradient(
+        to bottom right,
+        rgb(255, 136, 0),
+        rgb(238, 204, 142)
+      );
+      box-shadow: $lightShadow;
+      color: black;
+      transition: $mainTransition;
+      &:hover {
+        color: white;
+        background-color: darkorange;
+      }
+    }
+  }
+
+  article {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    .left-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      img {
+        display: flex;
+        width: 100%;
+        width: 6rem;
+        margin: auto;
+        // outline: 1px solid red;
+      }
+    }
+    .right-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@import "mQueries";

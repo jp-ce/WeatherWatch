@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: $bodyMinWidth;
+}
+main {
+  max-width: $bodyMaxWidth;
+  min-width: $bodyMinWidth;
+  width: 100%;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.25rem;
+  letter-spacing: $mainSpacing;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: $primaryLightTextColour;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
